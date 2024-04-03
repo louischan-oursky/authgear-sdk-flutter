@@ -11,7 +11,7 @@
   
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   
   <link rel="stylesheet" href="../static-assets/github.css?v1">
   <link rel="stylesheet" href="../static-assets/styles.css?v1">
@@ -21,31 +21,50 @@
 </head>
 
 
-<body data-base-href="../" data-using-base-href="false">
+<body data-base-href="../" data-using-base-href="false" class="light-theme">
 
 <div id="overlay-under-drawer"></div>
 
 <header id="title">
-  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">flutter_authgear</a></li>
-    <li class="self-crumb">authgear library</li>
+    <li class="self-crumb">flutter_authgear.dart</li>
   </ol>
   <div class="self-name">authgear</div>
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
+  <div class="toggle" id="theme-button" title="Toggle brightness">
+    <label for="theme">
+      <input type="checkbox" id="theme" value="light-theme">
+      <span id="dark-theme-button" class="material-symbols-outlined">
+        dark_mode
+      </span>
+      <span id="light-theme-button" class="material-symbols-outlined">
+        light_mode
+      </span>
+    </label>
+  </div>
 </header>
-
 <main>
 
+<div
+    id="dartdoc-main-content"
+    class="main-content"
+    data-above-sidebar=""
+    data-below-sidebar="authgear&#47;authgear-library-sidebar.html">
+  
+    <div>
+      
 
-  <div id="dartdoc-main-content" class="main-content">
-      <div>
-<h1><span class="kind-library">authgear</span> library 
-    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+      <h1>
+        <span class="kind-library">flutter_authgear</span>
+        library 
  
-</h1></div>
+
+      </h1>
+    </div>
 
     
 <section class="desc markdown">
@@ -56,7 +75,7 @@ You should use a single instance throughout the app.</p>
 subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.onSessionStateChange</a> to listen for any state change event.</p>
 <p>Use <a href="../authgear/Authgear/authenticate.html">Authgear.authenticate</a> to authenticate the end user.</p>
 <p>Use <a href="../authgear/Authgear/open.html">Authgear.open</a> to open the settings page to let the end-user to manage their account settings.</p>
-<p>Use <a href="../authgear/Authgear/wrapHttpClient.html">Authgear.wrapHttpClient</a> to make a <a href="https://pub.dev/documentation/http/0.13.4/http/Client-class.html">Client</a> capable of injecting access token into Authorization header.</p>
+<p>Use <a href="../authgear/Authgear/wrapHttpClient.html">Authgear.wrapHttpClient</a> to make a <a href="https://pub.dev/documentation/http/1.2.1/http/Client-class.html">Client</a> capable of injecting access token into Authorization header.</p>
 </section>
 
 
@@ -64,7 +83,15 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
       <h2>Classes</h2>
 
       <dl>
-        <dt id="Authgear">
+          <dt id="AuthenticateRequest">
+  <span class="name "><a href="../authgear/AuthenticateRequest-class.html">AuthenticateRequest</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="Authgear">
   <span class="name "><a href="../authgear/Authgear-class.html">Authgear</a></span> 
 
 </dt>
@@ -72,7 +99,15 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricOptionsAndroid">
+          <dt id="AuthgearExperimental">
+  <span class="name "><a href="../authgear/AuthgearExperimental-class.html">AuthgearExperimental</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="BiometricOptionsAndroid">
   <span class="name "><a href="../authgear/BiometricOptionsAndroid-class.html">BiometricOptionsAndroid</a></span> 
 
 </dt>
@@ -80,7 +115,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricOptionsIOS">
+          <dt id="BiometricOptionsIOS">
   <span class="name "><a href="../authgear/BiometricOptionsIOS-class.html">BiometricOptionsIOS</a></span> 
 
 </dt>
@@ -88,7 +123,15 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="PersistentTokenStorage">
+          <dt id="DeviceBrowserUIImplementation">
+  <span class="name "><a href="../authgear/DeviceBrowserUIImplementation-class.html">DeviceBrowserUIImplementation</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="PersistentTokenStorage">
   <span class="name "><a href="../authgear/PersistentTokenStorage-class.html">PersistentTokenStorage</a></span> 
 
 </dt>
@@ -96,7 +139,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="SessionStateChangeEvent">
+          <dt id="SessionStateChangeEvent">
   <span class="name "><a href="../authgear/SessionStateChangeEvent-class.html">SessionStateChangeEvent</a></span> 
 
 </dt>
@@ -104,7 +147,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="TokenStorage">
+          <dt id="TokenStorage">
   <span class="name "><a href="../authgear/TokenStorage-class.html">TokenStorage</a></span> 
 
 </dt>
@@ -112,7 +155,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="TransientTokenStorage">
+          <dt id="TransientTokenStorage">
   <span class="name "><a href="../authgear/TransientTokenStorage-class.html">TransientTokenStorage</a></span> 
 
 </dt>
@@ -120,8 +163,48 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="UserInfo">
+          <dt id="UIImplementation">
+  <span class="name "><a href="../authgear/UIImplementation-class.html">UIImplementation</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="UserInfo">
   <span class="name "><a href="../authgear/UserInfo-class.html">UserInfo</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="WebKitWebViewUIImplementation">
+  <span class="name "><a href="../authgear/WebKitWebViewUIImplementation-class.html">WebKitWebViewUIImplementation</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="WebKitWebViewUIImplementationOptions">
+  <span class="name "><a href="../authgear/WebKitWebViewUIImplementationOptions-class.html">WebKitWebViewUIImplementationOptions</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="WebKitWebViewUIImplementationOptionsAndroid">
+  <span class="name "><a href="../authgear/WebKitWebViewUIImplementationOptionsAndroid-class.html">WebKitWebViewUIImplementationOptionsAndroid</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="WebKitWebViewUIImplementationOptionsIOS">
+  <span class="name "><a href="../authgear/WebKitWebViewUIImplementationOptionsIOS-class.html">WebKitWebViewUIImplementationOptionsIOS</a></span> 
 
 </dt>
 <dd>
@@ -131,16 +214,11 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
       </dl>
     </section>
 
-
-
-
-
-
     <section class="summary offset-anchor" id="enums">
       <h2>Enums</h2>
 
       <dl>
-        <dt id="AuthenticationPage">
+          <dt id="AuthenticationPage">
   <span class="name "><a href="../authgear/AuthenticationPage.html">AuthenticationPage</a></span> 
 
 </dt>
@@ -148,7 +226,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricAccessConstraintAndroid">
+          <dt id="BiometricAccessConstraintAndroid">
   <span class="name "><a href="../authgear/BiometricAccessConstraintAndroid.html">BiometricAccessConstraintAndroid</a></span> 
 
 </dt>
@@ -156,7 +234,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricAccessConstraintIOS">
+          <dt id="BiometricAccessConstraintIOS">
   <span class="name "><a href="../authgear/BiometricAccessConstraintIOS.html">BiometricAccessConstraintIOS</a></span> 
 
 </dt>
@@ -164,7 +242,15 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="ColorScheme">
+          <dt id="BiometricLAPolicy">
+  <span class="name "><a href="../authgear/BiometricLAPolicy.html">BiometricLAPolicy</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="ColorScheme">
   <span class="name "><a href="../authgear/ColorScheme.html">ColorScheme</a></span> 
 
 </dt>
@@ -172,7 +258,15 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="PromptOption">
+          <dt id="ModalPresentationStyle">
+  <span class="name "><a href="../authgear/ModalPresentationStyle.html">ModalPresentationStyle</a></span> 
+
+</dt>
+<dd>
+  
+</dd>
+
+          <dt id="PromptOption">
   <span class="name "><a href="../authgear/PromptOption.html">PromptOption</a></span> 
 
 </dt>
@@ -180,7 +274,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="SessionState">
+          <dt id="SessionState">
   <span class="name "><a href="../authgear/SessionState.html">SessionState</a></span> 
 
 </dt>
@@ -188,7 +282,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="SessionStateChangeReason">
+          <dt id="SessionStateChangeReason">
   <span class="name "><a href="../authgear/SessionStateChangeReason.html">SessionStateChangeReason</a></span> 
 
 </dt>
@@ -196,7 +290,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="SettingsPage">
+          <dt id="SettingsPage">
   <span class="name "><a href="../authgear/SettingsPage.html">SettingsPage</a></span> 
 
 </dt>
@@ -208,11 +302,17 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
     </section>
 
 
+
+
+
+
+
+
     <section class="summary offset-anchor" id="exceptions">
       <h2>Exceptions / Errors</h2>
 
       <dl>
-        <dt id="AuthgearException">
+          <dt id="AuthgearException">
   <span class="name "><a href="../authgear/AuthgearException-class.html">AuthgearException</a></span> 
 
 </dt>
@@ -220,7 +320,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricLockoutException">
+          <dt id="BiometricLockoutException">
   <span class="name "><a href="../authgear/BiometricLockoutException-class.html">BiometricLockoutException</a></span> 
 
 </dt>
@@ -228,7 +328,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricNoEnrollmentException">
+          <dt id="BiometricNoEnrollmentException">
   <span class="name "><a href="../authgear/BiometricNoEnrollmentException-class.html">BiometricNoEnrollmentException</a></span> 
 
 </dt>
@@ -236,7 +336,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricNoPasscodeException">
+          <dt id="BiometricNoPasscodeException">
   <span class="name "><a href="../authgear/BiometricNoPasscodeException-class.html">BiometricNoPasscodeException</a></span> 
 
 </dt>
@@ -244,7 +344,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricNotSupportedOrPermissionDeniedException">
+          <dt id="BiometricNotSupportedOrPermissionDeniedException">
   <span class="name "><a href="../authgear/BiometricNotSupportedOrPermissionDeniedException-class.html">BiometricNotSupportedOrPermissionDeniedException</a></span> 
 
 </dt>
@@ -252,7 +352,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="BiometricPrivateKeyNotFoundException">
+          <dt id="BiometricPrivateKeyNotFoundException">
   <span class="name "><a href="../authgear/BiometricPrivateKeyNotFoundException-class.html">BiometricPrivateKeyNotFoundException</a></span> 
 
 </dt>
@@ -260,7 +360,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="CancelException">
+          <dt id="CancelException">
   <span class="name "><a href="../authgear/CancelException-class.html">CancelException</a></span> 
 
 </dt>
@@ -268,7 +368,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="OAuthException">
+          <dt id="OAuthException">
   <span class="name "><a href="../authgear/OAuthException-class.html">OAuthException</a></span> 
 
 </dt>
@@ -276,7 +376,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   
 </dd>
 
-        <dt id="ServerException">
+          <dt id="ServerException">
   <span class="name "><a href="../authgear/ServerException-class.html">ServerException</a></span> 
 
 </dt>
@@ -290,67 +390,29 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
   </div> <!-- /.main-content -->
 
   <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
-    <header id="header-search-sidebar" class="hidden-l">
+    <!-- The search input and breadcrumbs below are only responsively visible at low resolutions. -->
+<header id="header-search-sidebar" class="hidden-l">
   <form class="search-sidebar" role="search">
     <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
 </header>
 
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-  <li><a href="../index.html">flutter_authgear</a></li>
-  <li class="self-crumb">authgear library</li>
+    <li><a href="../index.html">flutter_authgear</a></li>
+    <li class="self-crumb">flutter_authgear.dart</li>
 </ol>
 
 
     <h5><span class="package-name">flutter_authgear</span> <span class="package-kind">package</span></h5>
     <ol>
       <li class="section-title">Libraries</li>
-      <li><a href="../authgear/authgear-library.html">authgear</a></li>
+      <li><a href="../authgear/authgear-library.html">flutter_authgear</a></li>
 </ol>
 
   </div>
 
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
     <h5>authgear library</h5>
-    <ol>
-  <li class="section-title"><a href="../authgear/authgear-library.html#classes">Classes</a></li>
-  <li><a href="../authgear/Authgear-class.html">Authgear</a></li>
-  <li><a href="../authgear/BiometricOptionsAndroid-class.html">BiometricOptionsAndroid</a></li>
-  <li><a href="../authgear/BiometricOptionsIOS-class.html">BiometricOptionsIOS</a></li>
-  <li><a href="../authgear/PersistentTokenStorage-class.html">PersistentTokenStorage</a></li>
-  <li><a href="../authgear/SessionStateChangeEvent-class.html">SessionStateChangeEvent</a></li>
-  <li><a href="../authgear/TokenStorage-class.html">TokenStorage</a></li>
-  <li><a href="../authgear/TransientTokenStorage-class.html">TransientTokenStorage</a></li>
-  <li><a href="../authgear/UserInfo-class.html">UserInfo</a></li>
-
-
-
-
-
-
-  <li class="section-title"><a href="../authgear/authgear-library.html#enums">Enums</a></li>
-  <li><a href="../authgear/AuthenticationPage.html">AuthenticationPage</a></li>
-  <li><a href="../authgear/BiometricAccessConstraintAndroid.html">BiometricAccessConstraintAndroid</a></li>
-  <li><a href="../authgear/BiometricAccessConstraintIOS.html">BiometricAccessConstraintIOS</a></li>
-  <li><a href="../authgear/ColorScheme.html">ColorScheme</a></li>
-  <li><a href="../authgear/PromptOption.html">PromptOption</a></li>
-  <li><a href="../authgear/SessionState.html">SessionState</a></li>
-  <li><a href="../authgear/SessionStateChangeReason.html">SessionStateChangeReason</a></li>
-  <li><a href="../authgear/SettingsPage.html">SettingsPage</a></li>
-
-
-  <li class="section-title"><a href="../authgear/authgear-library.html#exceptions">Exceptions</a></li>
-  <li><a href="../authgear/AuthgearException-class.html">AuthgearException</a></li>
-  <li><a href="../authgear/BiometricLockoutException-class.html">BiometricLockoutException</a></li>
-  <li><a href="../authgear/BiometricNoEnrollmentException-class.html">BiometricNoEnrollmentException</a></li>
-  <li><a href="../authgear/BiometricNoPasscodeException-class.html">BiometricNoPasscodeException</a></li>
-  <li><a href="../authgear/BiometricNotSupportedOrPermissionDeniedException-class.html">BiometricNotSupportedOrPermissionDeniedException</a></li>
-  <li><a href="../authgear/BiometricPrivateKeyNotFoundException-class.html">BiometricPrivateKeyNotFoundException</a></li>
-  <li><a href="../authgear/CancelException-class.html">CancelException</a></li>
-  <li><a href="../authgear/OAuthException-class.html">OAuthException</a></li>
-  <li><a href="../authgear/ServerException-class.html">ServerException</a></li>
-</ol>
-
   </div><!--/sidebar-offcanvas-right-->
 
 </main>
@@ -358,7 +420,7 @@ subscribe to <a href="../authgear/Authgear/onSessionStateChange.html">Authgear.o
 <footer>
   <span class="no-break">
     flutter_authgear
-      0.3.0
+      1.2.1
   </span>
 
   
