@@ -88,12 +88,15 @@ Future&lt;void&gt; refreshAccessToken() async {
     return;
   }
 
+  String? deviceSecret = await _sharedStorage.getDeviceSecret(name);
+
   final xDeviceInfo = await _getXDeviceInfo();
   final tokenRequest = OIDCTokenRequest(
     grantType: GrantType.refreshToken,
     clientID: clientID,
     refreshToken: refreshToken,
     xDeviceInfo: xDeviceInfo,
+    deviceSecret: deviceSecret,
   );
   try {
     final tokenResponse = await _apiClient.sendTokenRequest(tokenRequest);
@@ -140,7 +143,7 @@ Future&lt;void&gt; refreshAccessToken() async {
 <footer>
   <span class="no-break">
     flutter_authgear
-      1.6.0
+      1.7.0
   </span>
 
   
